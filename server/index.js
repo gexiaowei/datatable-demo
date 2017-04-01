@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 const zip_codes = require('./zip_code');
 const app = express();
 
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
@@ -40,7 +40,7 @@ function get_zip_codes(condition) {
         }
         let match = false;
         for (let key in item) {
-            if (('' + item[key]).indexOf(search['value']) > 1) {
+            if (('' + item[key]).indexOf(search['value']) > -1) {
                 match = true;
             }
         }
