@@ -1,4 +1,4 @@
-#### 说明
+#### datatable说明
 
 1.server端数据格式为:
 ```
@@ -24,3 +24,8 @@
 ```
 
 3.datatable支持格式data数据中 item的字段中必须存在aoColumns定义数组中data的字段，缺一不可
+
+#### 数据来源说明
+1.现在该数据为线上环境，如果现在本地跑数据，请先运行server文件夹下的index.js
+
+2.替换client下index.html下的ajax路径为```http://127.0.0.1:3000/zip```
